@@ -231,3 +231,4 @@ add_prompt()
 
 print_prompt_summary()
 list_prompts()
+view_by_category()
