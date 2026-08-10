@@ -6,13 +6,19 @@ DATA_FILE = "prompts.json"
 
 
 def load_prompts():
-    """저장된 프롬프트 데이터를 불러옵니다."""
-    if not os.path.exists(DATA_FILE):
-        return []
-    try:
-        with open(DATA_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
-    except (json.JSONDecodeError, IOError):
+    # main.py 파일이 있는 절대 경로를 기준으로 prompts.json 위치 지정
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(base_dir, "prompts.json")
+    
+    if os.path.exists(file_path):
+        try:
+            with open(file_path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception as e:
+            print(f"⚠️ 파일 로드 중 오류 발생: {e}")
+            return []
+    else:
+        print("⚠️ prompts.json 파일을 찾을 수 없습니다.")
         return []
 
 
