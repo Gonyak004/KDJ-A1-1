@@ -228,3 +228,6 @@ if __name__ == "__main__":
 CATEGORY_MAP
 select_category()
 add_prompt()
+
+print_prompt_summary()
+list_prompts()
