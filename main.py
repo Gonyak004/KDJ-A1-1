@@ -44,39 +44,46 @@ def print_prompt_summary(prompt):
 
 
 def add_prompt(prompts):
-    """새로운 프롬프트를 추가합니다."""
-    print("\n=== ➕ 새 프롬프트 추가 ===")
-    title = input("제목: ").strip()
-    if not title:
-        print("❌ 제목은 필수 항목입니다.")
+    print("\n--- [새 프롬프트 추가] ---")
+    print("💡 (이전으로 돌아가시려면 '0'을 입력하세요.)")
+    
+    title = input("\n제목: ").strip()
+    
+    # '0' 입력 시 메인 메뉴로 복귀
+    if title == '0':
+        print("↩️ 새 프롬프트 추가를 취소하고 메인 메뉴로 돌아갑니다.")
         return
 
-    category = input("카테고리 (예: 개발, 글쓰기, 번역, 기타): ").strip()
-    if not category:
-        category = "기타"
-
+    category = input("카테고리 (예: 텍스트 생성, 이미지 생성, 페르소나 등): ").strip()
     content = input("프롬프트 내용: ").strip()
-    if not content:
-        print("❌ 내용은 필수 항목입니다.")
-        return
+    tags_input = input("태그 (쉼표로 구분, 예: 파이썬,디버깅): ").strip()
+    
+    tags = [tag.strip() for tag in tags_input.split(",") if tag.strip()]
 
-    tags_input = input("키워드/태그 (쉼표로 구분, 예: 파이썬, 리팩토링): ").strip()
-    tags = [t.strip() for t in tags_input.split(",") if t.strip()]
+    # 새로운 ID 부여 (기존 ID의 최대값 + 1)
+    new_id = max([p.get("id", 0) for p in prompts], default=0) + 1
 
-    new_id = max([p["id"] for p in prompts], default=0) + 1
     new_prompt = {
         "id": new_id,
         "title": title,
-        "category": category,
+        "category": category if category else "미분류",
         "content": content,
         "tags": tags,
-        "is_favorite": False,
-        "created_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "is_favorite": False
     }
 
     prompts.append(new_prompt)
-    save_prompts(prompts)
-    print(f"\n✅ 프롬프트 #{new_id}가 등록되었습니다.")
+
+    # prompts.json 파일에 자동 저장
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(base_dir, "prompts.json")
+    
+    try:
+        with open(file_path, "w", encoding="utf-8") as f:
+            json.dump(prompts, f, ensure_ascii=False, indent=2)
+        print(f"\n✅ '{title}' 프롬프트가 성공적으로 저장되었습니다.")
+    except Exception as e:
+        print(f"\n❌ 저장 중 오류가 발생했습니다: {e}")
 
 
 def list_prompts(prompts):
