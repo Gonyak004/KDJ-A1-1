@@ -224,3 +224,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
+CATEGORY_MAP
+select_category()
+add_prompt()
