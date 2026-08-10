@@ -1,1 +1,42 @@
-[]
+[
+  {
+    "id": 1,
+    "title": "블로그 포스팅용 텍스트 자동 작성",
+    "category": "텍스트 생성",
+    "content": "주제와 주요 키워드를 바탕으로 서론, 본론(소제목 3개), 결론 구조를 갖춘 1500자 분량의 가독성 높은 블로그 포스팅 원고를 작성해줘. 친근하면서도 전문적인 어조를 유지해줘.",
+    "tags": ["텍스트생성", "블로그", "콘텐츠작성"],
+    "is_favorite": false
+  },
+  {
+    "id": 2,
+    "title": "드랍 빈(Drop Bean) 커피 브랜드 광고 이미지 생성",
+    "category": "이미지 생성",
+    "content": "A high-end cinematic advertisement photo of Drop Bean coffee, steaming fresh dark roast espresso dripping into a glass cup, moody warm cafe lighting, highly detailed 8k resolution, photorealistic style --ar 16:9",
+    "tags": ["이미지생성", "커피광고", "드랍빈", "미드저니"],
+    "is_favorite": true
+  },
+  {
+    "id": 3,
+    "title": "드랍 빈(Drop Bean) 커피 브랜드 비디오 시네마틱 샷",
+    "category": "영상 생성",
+    "content": "Slow motion close-up video of rich espresso dropping into a clear glass cup, golden crema swirling, warm atmospheric sunlight streaming in, professional coffee commercial style, 4k 60fps cinematic movement.",
+    "tags": ["영상생성", "커피광고", "드랍빈", "Runway"],
+    "is_favorite": true
+  },
+  {
+    "id": 4,
+    "title": "초보 심리 상담사를 위한 전문 AI 심리 상담사",
+    "category": "페르소나",
+    "content": "너는 20년 경력의 베테랑 전문 심리 상담사이자 초보 심리 상담사를 가르치는 수퍼바이저야. 내담자와의 내담 사례나 고민을 입력하면 공감적 경청 기법, 질의 방향, 그리고 주의해야 할 윤리적 지침을 상통하게 조언해줘.",
+    "tags": ["페르소나", "심리상담", "수퍼비전", "상담사"],
+    "is_favorite": true
+  },
+  {
+    "id": 5,
+    "title": "Make 활용 컴퓨터 견적 상담 자동화 워크플로우",
+    "category": "자동화",
+    "content": "Make(Integromat)를 활용한 자동화 워크플로우 프롬프트: 구글 폼으로 접수된 PC 견적 요청 데이터를 구글 시트에 자동으로 기록한 뒤, 예산 및 용도별 맞춤견적 안내문을 생성하여 지메일(Gmail)로 자동 발송하는 연동 프로세스 가이드 및 자동화 지침.",
+    "tags": ["자동화", "Make", "구글폼", "구글시트", "지메일"],
+    "is_favorite": false
+  }
+]
