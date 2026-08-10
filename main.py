@@ -224,11 +224,38 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
-CATEGORY_MAP
-select_category()
-add_prompt()
 
+CATEGORY_MAP = {
+    "1": "개발",
+    "2": "디자인",
+    "3": "기획"
+}
+
+def select_category(prompts):
+    """카테고리 목록을 보여주고 선택한 카테고리의 프롬프트를 필터링하여 조회하는 함수"""
+    # 등록된 모든 카테고리 중복 없이 추출
+    categories = list(set(p.get("category", "미분류") for p in prompts if p.get("category")))
+    
+    if not categories:
+        print("❌ 등록된 카테고리가 없습니다.")
+        return
+
+    print("\n--- [카테고리 목록] ---")
+    for idx, cat in enumerate(categories, 1):
+        print(f"{idx}. {cat}")
+        
+    choice = input("\n조회할 카테고리 번호를 입력하세요: ").strip()
+    
+    if choice.isdigit() and 1 <= int(choice) <= len(categories):
+        selected_cat = categories[int(choice) - 1]
+        print(f"\n📁 [{selected_cat}] 카테고리 프롬프트 목록:")
+        
+        filtered_prompts = [p for p in prompts if p.get("category") == selected_cat]
+        for p in filtered_prompts:
+            print_prompt_summary(p)
+    else:
+        print("❌ 올바른 번호를 입력해 주세요.")
+add_prompt()
 print_prompt_summary()
 list_prompts()
 view_by_category()
