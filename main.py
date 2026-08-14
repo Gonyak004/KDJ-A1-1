@@ -15,10 +15,10 @@ def load_prompts():
             with open(file_path, "r", encoding="utf-8") as f:
                 return json.load(f)
         except Exception as e:
-            print(f"⚠️ 파일 로드 중 오류 발생: {e}")
+            print(f" 파일 로드 중 오류 발생: {e}")
             return []
     else:
-        print("⚠️ prompts.json 파일을 찾을 수 없습니다.")
+        print(" prompts.json 파일을 찾을 수 없습니다.")
         return []
 
 
@@ -51,7 +51,7 @@ def add_prompt(prompts):
     
     # '0' 입력 시 메인 메뉴로 복귀
     if title == '0':
-        print("↩️ 새 프롬프트 추가를 취소하고 메인 메뉴로 돌아갑니다.")
+        print(" 새 프롬프트 추가를 취소하고 메인 메뉴로 돌아갑니다.")
         return
 
     category = input("카테고리 (예: 텍스트 생성, 이미지 생성, 페르소나 등): ").strip()
@@ -81,14 +81,14 @@ def add_prompt(prompts):
     try:
         with open(file_path, "w", encoding="utf-8") as f:
             json.dump(prompts, f, ensure_ascii=False, indent=2)
-        print(f"\n✅ '{title}' 프롬프트가 성공적으로 저장되었습니다.")
+        print(f"\n '{title}' 프롬프트가 성공적으로 저장되었습니다.")
     except Exception as e:
-        print(f"\n❌ 저장 중 오류가 발생했습니다: {e}")
+        print(f"\n 저장 중 오류가 발생했습니다: {e}")
 
 
 def list_prompts(prompts):
     """전체 프롬프트 목록을 조회합니다."""
-    print("\n=== 📋 전체 프롬프트 목록 ===")
+    print("\n===  전체 프롬프트 목록 ===")
     if not prompts:
         print("등록된 프롬프트가 없습니다.")
         return
@@ -99,7 +99,7 @@ def list_prompts(prompts):
 
 def view_by_category(prompts):
     """카테고리별로 프롬프트를 조회합니다."""
-    print("\n=== 📂 카테고리별 조회 ===")
+    print("\n===  카테고리별 조회 ===")
     categories = sorted(list(set(p["category"] for p in prompts)))
     if not categories:
         print("등록된 카테고리가 없습니다.")
@@ -120,7 +120,7 @@ def view_by_category(prompts):
 
 def search_prompts(prompts):
     """제목, 내용, 태그에서 키워드로 검색합니다."""
-    print("\n=== 🔍 키워드 검색 ===")
+    print("\n===  키워드 검색 ===")
     keyword = input("검색어 입력: ").strip().lower()
     if not keyword:
         print("검색어를 입력해주세요.")
@@ -157,11 +157,11 @@ def list_favorites(prompts):
 
 def view_detail(prompts):
     """특정 프롬프트의 상세 내용을 조회하고 관리합니다."""
-    print("\n=== 📖 프롬프트 상세 보기 ===")
+    print("\n===  프롬프트 상세 보기 ===")
     try:
         prompt_id = int(input("조회할 프롬프트 ID 입력: "))
     except ValueError:
-        print("❌ 숫자로 된 ID를 입력해주세요.")
+        print(" 숫자로 된 ID를 입력해주세요.")
         return
 
     prompt = next((p for p in prompts if p["id"] == prompt_id), None)
@@ -189,13 +189,13 @@ def view_detail(prompts):
         prompt["is_favorite"] = not prompt.get("is_favorite", False)
         save_prompts(prompts)
         status = "등록" if prompt["is_favorite"] else "해제"
-        print(f"✅ 즐겨찾기가 {status}되었습니다.")
+        print(f" 즐겨찾기가 {status}되었습니다.")
     elif sub_choice == "2":
         confirm = input("정말 삭제하시겠습니까? (y/N): ").strip().lower()
         if confirm == "y":
             prompts.remove(prompt)
             save_prompts(prompts)
-            print("✅ 프롬프트가 삭제되었습니다.")
+            print(" 프롬프트가 삭제되었습니다.")
 
 
 def main():
@@ -232,7 +232,7 @@ def main():
             print("\n프로그램을 종료합니다. 이용해주셔서 감사합니다!")
             break
         else:
-            print("\n❌ 잘못된 번호입니다. 다시 입력해주세요.")
+            print("\n 잘못된 번호입니다. 다시 입력해주세요.")
 
 
 if __name__ == "__main__":
@@ -250,7 +250,7 @@ def select_category(prompts):
     categories = list(set(p.get("category", "미분류") for p in prompts if p.get("category")))
     
     if not categories:
-        print("❌ 등록된 카테고리가 없습니다.")
+        print("등록된 카테고리가 없습니다.")
         return
 
     print("\n--- [카테고리 목록] ---")
@@ -261,13 +261,13 @@ def select_category(prompts):
     
     if choice.isdigit() and 1 <= int(choice) <= len(categories):
         selected_cat = categories[int(choice) - 1]
-        print(f"\n📁 [{selected_cat}] 카테고리 프롬프트 목록:")
+        print(f"\n [{selected_cat}] 카테고리 프롬프트 목록:")
         
         filtered_prompts = [p for p in prompts if p.get("category") == selected_cat]
         for p in filtered_prompts:
             print_prompt_summary(p)
     else:
-        print("❌ 올바른 번호를 입력해 주세요.")
+        print("올바른 번호를 입력해 주세요.")
 add_prompt()
 print_prompt_summary()
 list_prompts()
