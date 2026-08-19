@@ -55,18 +55,21 @@ Python & git 기초
 
 기술 스택 및 요구 사항
 
-Language: Python 3.8+
+Language: Python 3.10.7
 
 Data Storage: JSON (prompts.json)
 
 Environment: VS Code Terminal / Command Line Interface (CLI)
 
+<img width="1047" height="15" alt="Image" src="https://github.com/user-attachments/assets/96e30d3b-99ad-4e48-96b4-c36d90e7e866" />
+
+<img width="1047" height="15" alt="Image" src="https://github.com/user-attachments/assets/90ebebee-75ce-4dd0-bf0c-e6847f74614b" />
+
 ## 프로그램 실행 방법
 
 # 저장소 클론 #
 
-    git clone [https://github.com/본인-아이디/저장소-이름.git](https://github.com/본인-아이디/저장소-이름.git)
-cd 저장소-이름
+    git clone [https://github.com/Gonyak004/KDJ-A1-1.git]
 
 # 프로그램 실행 #
 
