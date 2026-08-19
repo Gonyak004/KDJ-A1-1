@@ -70,6 +70,10 @@ Environment: VS Code Terminal / Command Line Interface (CLI)
 
     git clone [https://github.com/Gonyak004/KDJ-A1-1.git]
 
+**Git clone 원격 저장서 터미널 실행 로그**
+
+<img width="1086" height="130" alt="Image" src="https://github.com/user-attachments/assets/2bdb150f-3ced-4e61-8093-96c7e2486496" />
+
 # 프로그램 실행 #
 
 별도의 외부 라이브러리 설치 없이 파이썬 기본 환경에서 즉시 실행할 수 있습니다.
