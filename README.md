@@ -74,7 +74,7 @@ cd 저장소-이름
 
 기본 등록 프롬프트 데이터 구성
 
-<스샷>
+<img width="1551" height="1044" alt="Image" src="https://github.com/user-attachments/assets/9549234f-0d4d-4c3e-a563-eb613bfda1b8" />
 
 텍스트 생성: 블로그 포스팅용 원고 자동 작성 프롬프트
 
@@ -124,7 +124,7 @@ cd 저장소-이름
 
       이전 메뉴 복귀 (입력 취소): 추가 작업 중 0을 입력하면 데이터 저장 없이 안전하게 메인 메뉴로 복귀
 
-(스샷 첨부)
+<img width="512" height="456" alt="Image" src="https://github.com/user-attachments/assets/f88deb8f-5a79-47e4-a2ec-097e4d5ae03a" />
 
 2. 조회 및 검색 기능 (Read & Search)
 
@@ -132,7 +132,7 @@ cd 저장소-이름
 
       카테고리별 필터링 조회: 등록된 카테고리(텍스트 생성, 이미지 생성, 영상 생성, 페르소나, 자동화 등)를 자동 추출하여 선택한 카테고리 항목만 모아보기
 
-(스샷 첨부)
+<img width="1040" height="373" alt="Image" src="https://github.com/user-attachments/assets/2e3d1cd1-5cba-4774-abc9-d0600fcb77c4" />
 
       태그 및 키워드 검색: 특정 키워드나 태그를 포함하는 프롬프트를 빠르게 탐색
 
@@ -142,7 +142,7 @@ cd 저장소-이름
 
       즐겨찾기 전용 목록 보기: ★ 표시된 프롬프트만 따로 필터링하여 조회
 
-(스샷 첨부)
+<img width="1036" height="341" alt="Image" src="https://github.com/user-attachments/assets/9ff560ee-fa3f-4587-9c2e-79634a68168d" />
 
 4. 사용자 경험 및 시스템 안정성 (UX & Error Handling)
 
@@ -152,6 +152,8 @@ cd 저장소-이름
       잘못된 메뉴 번호/입력값 입력 시 안내 메시지 출력 후 재입력 유도
 
       데이터 누락 시 .get() 방식 활용 및 파일 로드 에러 방지
+
+   <img width="1102" height="562" alt="Image" src="https://github.com/user-attachments/assets/2aafa6d7-4c40-4d92-bda5-e1b3bbb2f3f4" />
 
 ##
 
@@ -199,8 +201,6 @@ cd 저장소-이름
 
    프로젝트 내 예시: Make 활용 컴퓨터 견적 상담 워크플로우 (구글 폼 ➔ 구글 시트 ➔ 지메일 발송)
 
-(스샷 첨부)
-
 ##
 
 ### 5. 커밋 및 브랜치 생성 및 병합 기록
@@ -237,4 +237,4 @@ cd 저장소-이름
 
 >중간에 가지가 옆으로 빠져나와(새 기능 개발) 작업을 마친 뒤 다시 큰 줄기(main)로 합쳐진 것을 한눈에 볼 수 있습니다.
 
-(커밋 스샷 첨부)
+<img width="1018" height="394" alt="Image" src="https://github.com/user-attachments/assets/cb15b7c3-85c2-47dc-98a3-4895e331f5b4" />
