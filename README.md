@@ -70,7 +70,7 @@ Environment: VS Code Terminal / Command Line Interface (CLI)
 
     git clone [https://github.com/Gonyak004/KDJ-A1-1.git]
 
-**Git clone 원격 저장서 터미널 실행 로그**
+**Git clone 원격 저장소 터미널 실행 로그**
 
 <img width="1086" height="130" alt="Image" src="https://github.com/user-attachments/assets/2bdb150f-3ced-4e61-8093-96c7e2486496" />
 
