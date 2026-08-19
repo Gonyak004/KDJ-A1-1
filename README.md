@@ -61,9 +61,8 @@ Data Storage: JSON (prompts.json)
 
 Environment: VS Code Terminal / Command Line Interface (CLI)
 
-<img width="1047" height="15" alt="Image" src="https://github.com/user-attachments/assets/96e30d3b-99ad-4e48-96b4-c36d90e7e866" />
-
-<img width="1047" height="15" alt="Image" src="https://github.com/user-attachments/assets/90ebebee-75ce-4dd0-bf0c-e6847f74614b" />
+<img width="1060" height="16" alt="Image" src="https://github.com/user-attachments/assets/e77b0aa5-4552-4409-9504-b5aadf805ef3" />
+<img width="1047" height="15" alt="Image" src="https://github.com/user-attachments/assets/cc3719fb-0aa6-4f76-9f27-f2da923bd392" />
 
 ## 프로그램 실행 방법
 
