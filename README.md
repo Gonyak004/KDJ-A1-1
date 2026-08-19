@@ -24,7 +24,7 @@ Python & git 기초
 
 주요 기능
 
-<스크린 샷>
+<img width="1096" height="255" alt="Image" src="https://github.com/user-attachments/assets/6c9a23dd-232d-4dd4-9c09-d9e27b5f37a8" />
 
 1. 전체 프롬프트 목록 조회
 
