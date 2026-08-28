@@ -72,17 +72,16 @@ Python & git 기초
 
 이 프로그램은 **메모리 내 동적 데이터 관리**를 위해 `List`와 `Dictionary`의 중첩 구조(`List[Dict]`)를 선택했습니다.
 
-```python
-# prompts.json 및 내부 데이터 구조
+prompts.json 및 내부 데이터 구조
       
-        {
+        
           "id": 1,
           "title": "블로그 포스팅 작성",
           "category": "텍스트 생성",
           "content": "...",
           "tags": ["블로그", "마케팅"],
           "is_favorite": false
-        }
+        
 
 
 기술 스택 및 요구 사항
