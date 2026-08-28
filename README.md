@@ -74,16 +74,16 @@ Python & git 기초
 
 ```python
 # prompts.json 및 내부 데이터 구조
-[
-  {
-    "id": 1,
-    "title": "블로그 포스팅 작성",
-    "category": "텍스트 생성",
-    "content": "...",
-    "tags": ["블로그", "마케팅"],
-    "is_favorite": false
-  }
-]
+      
+        {
+          "id": 1,
+          "title": "블로그 포스팅 작성",
+          "category": "텍스트 생성",
+          "content": "...",
+          "tags": ["블로그", "마케팅"],
+          "is_favorite": false
+        }
+
 
 기술 스택 및 요구 사항
 
